@@ -1,12 +1,13 @@
 #ifndef _BEOMOTE_H
 #define _BEOMOTE_H
 
+#include "Commands.h"
 #include <Arduino.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
 // Common divisors for 3125 = 1, 5, 25, 125, 625, 3125
-#define TICK 125
+#define TICK 625
 
 // Defining the Bang & Olufsen commands
 #define BEO_ZERO    (3125 / TICK)
@@ -16,9 +17,9 @@
 #define BEO_START   (15625 / TICK)
 
 typedef struct {
-    unsigned char link;
-    unsigned char address;
-    unsigned char command;
+    boolean link;
+    beo_address address;
+    beo_command command;
 } BeoCommand;
 
 class Beomote {
@@ -37,7 +38,7 @@ class Beomote {
 
         boolean irReceived;
 
-        unsigned char link;
+        boolean link;
         unsigned char address;
         unsigned char command;
 

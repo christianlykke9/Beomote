@@ -38,8 +38,8 @@ int Beomote::receive(BeoCommand &cmd) {
 
 	if (irReceived) {
 		cmd.link = link;
-		cmd.address = address;
-		cmd.command = command;
+		cmd.address = (beo_address)address;
+		cmd.command = (beo_command)command;
 
 		reset();
 		return 1;
