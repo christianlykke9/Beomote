@@ -6,15 +6,15 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Beomote                        KEYWORD1
-BeoCommand                     KEYWORD1
+Beomote	KEYWORD1
+BeoCommand	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-initialize                     KEYWORD2
-receive                        KEYWORD2
+initialize	KEYWORD2
+receive	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
